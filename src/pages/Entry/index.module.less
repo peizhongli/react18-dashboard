@@ -1,0 +1,55 @@
+@import "@assets/styles/common.less";
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 0 0 5px #00ecff;
+  font-size: 66 * @px2vw;
+
+  &Content {
+    display: flex;
+    align-items: center;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 200 * @px2vw;
+      height: 3 * @px2vw;
+    }
+
+    &::before {
+      margin-right: 20 * @px2vw;
+      background-image: linear-gradient(to right, transparent, #156dae);
+    }
+
+    &::after {
+      margin-left: 20 * @px2vw;
+      background-image: linear-gradient(to left, transparent, #156dae);
+    }
+  }
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  padding: 20 * @px2vw;
+
+  .left,
+  .right {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 600 * @px2vw;
+  }
+
+  .middle {
+    flex: 1;
+    min-width: 600 * @px2vw;
+    min-height: 300 * @px2vw;
+    padding-top: 20 * @px2vw;
+    margin: 0 14 * @px2vw;
+  }
+}

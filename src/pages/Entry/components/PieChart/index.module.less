@@ -1,0 +1,59 @@
+@import "@assets/styles/common.less";
+
+.wrap {
+  flex: 1;
+  margin-top: 12 * @px2vw;
+
+  :global {
+    .clipContent {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .chartWrap {
+    flex: 1;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+
+    li {
+      flex: 1;
+      text-align: center;
+
+      & + li {
+        margin-left: 10 * @px2vw;
+      }
+    }
+
+    .subtitle {
+      margin-bottom: 6 * @px2vw;
+      font-size: 20 * @px2vw;
+      color: #00ecff;
+    }
+
+    .channelBox {
+      margin: 0;
+      padding: 22 * @px2vw 20 * @px2vw;
+      box-shadow: 0 0 10 * @px2vw #00ecff7f inset;
+      font-size: 14 * @px2vw;
+      .borderInnerShadowBox();
+
+      p {
+        color: #fff;
+
+        &::before {
+          content: attr(data-des);
+          margin-right: 2 * @px2vw;
+          color: #00ecff;
+        }
+
+        & + p {
+          margin-top: 12 * @px2vw;
+        }
+      }
+    }
+  }
+}

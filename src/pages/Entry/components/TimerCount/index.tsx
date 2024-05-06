@@ -1,10 +1,10 @@
-import { CSSProperties, useMemo } from "react";
+import { CSSProperties } from "react";
 import styles from "./index.module.less";
 
 interface CustomProperties extends CSSProperties {
-  "--dh": string;
-  "--dm": string;
-  "--ds": string;
+  "--dh": number;
+  "--dm": number;
+  "--ds": number;
 }
 
 const now = new Date();
@@ -18,21 +18,21 @@ const t = {
 };
 
 const TimerCount = () => {
-  const properties: CustomProperties = useMemo(() => {
+  const getProperties: () => CustomProperties = () => {
     const { s, m, h } = t;
     // 计算偏移量，比如秒为30的时候，分钟其实也走了30/60，时针同理，最后算出需要延迟的秒数
     const ds = s;
     const dm = (m + s / 60) * 60;
     const dh = (h + m / 60 + s / 60 / 60) * 60 * 60;
     return {
-      "--dh": `${dh}s`,
-      "--dm": `${dm}s`,
-      "--ds": `${ds}s`,
+      "--dh": dh,
+      "--dm": dm,
+      "--ds": ds,
     };
-  }, []);
+  };
 
   return (
-    <div style={properties}>
+    <div style={getProperties()}>
       <span>
         {t.yyyy}年{t.mm}月{t.dd}日{" "}
       </span>

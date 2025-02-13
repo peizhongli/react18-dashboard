@@ -19,8 +19,8 @@ const RealtimeData = (props: RealtimeDataProps) => {
   );
 
   return (
-    <ClipBox customClass={styles.wrap} title="实时累计数据">
-      <div data-title="浏览量" className={styles.realtimeContent}>
+    <ClipBox customClass={styles.wrap} title="当前数据">
+      <div data-title="PV" className={styles.realtimeContent}>
         <ul>
           {pv.map((i, index) => (
             <li key={index}>
@@ -29,7 +29,7 @@ const RealtimeData = (props: RealtimeDataProps) => {
           ))}
         </ul>
       </div>
-      <div data-title="访客量" className={styles.realtimeContent}>
+      <div data-title="UV" className={styles.realtimeContent}>
         <ul>
           {uv.map((i, index) => (
             <li key={index}>

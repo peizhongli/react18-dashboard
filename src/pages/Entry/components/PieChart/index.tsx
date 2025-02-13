@@ -27,10 +27,10 @@ const PieChart = (props: { data: Platform[] }) => {
     const allPlatform = data.map((i) => i.name);
     init(pieChartRef.current as HTMLElement, {
       color: [
-        ["#5EC0EF", "#1B76C4"],
-        ["#56D09D", "#1A9062"],
-        ["#BB8AF1", "#7232E1"],
-        ["#E1F18A", "#DCE132"],
+        ["#ccC0EF", "#cc76C4"],
+        ["#bbD09D", "#bb9062"],
+        ["#aa8AF1", "#aa32E1"],
+        ["#ddF18A", "#ddE132"],
       ].map(
         ([startColor, endColor]): ZRColor => ({
           type: "linear",
@@ -89,7 +89,7 @@ const PieChart = (props: { data: Platform[] }) => {
           },
           labelLine: {
             lineStyle: {
-              color: "#00ECFF",
+              color: "#ccECFF",
             },
           },
           emphasis: {
@@ -106,7 +106,7 @@ const PieChart = (props: { data: Platform[] }) => {
                   fontWeight: "bold",
                 },
                 d: {
-                  color: "#00ECFF",
+                  color: "#ccECFF",
                   fontWeight: "bold",
                 },
               },
@@ -135,15 +135,15 @@ const PieChart = (props: { data: Platform[] }) => {
   };
 
   return (
-    <ClipBox customClass={styles.wrap} title="业务量渠道占比及质量数据">
+    <ClipBox customClass={styles.wrap} title="当前数据">
       <div ref={pieChartRef} className={styles.chartWrap}></div>
       <ul>
         {props.data.map((i, index) => (
           <li key={index}>
             <p className={styles.subtitle}>{i.name}</p>
             <div className={styles.channelBox}>
-              <p data-des="解决率">{i.solveRate}%</p>
-              <p data-des="满意率">{i.satisfactionRate}%</p>
+              <p data-des="数据1">{i.solveRate}%</p>
+              <p data-des="数据2">{i.satisfactionRate}%</p>
             </div>
           </li>
         ))}

@@ -111,7 +111,7 @@ const MapChart = (props: MapChartProps) => {
             image: makeCanvas(), // 支持为 HTMLImageElement, HTMLCanvasElement，不支持路径字符串
           },
           borderWidth: 1,
-          borderColor: "#00ECFF",
+          borderColor: "#ccECFF",
           shadowColor: "rgba(0, 236, 255, 0.8)",
           shadowBlur: 7,
         },
@@ -152,14 +152,14 @@ const MapChart = (props: MapChartProps) => {
             position: "right",
             show: true,
             fontSize: 13,
-            color: "#F6F600",
+            color: "#aaF600",
           },
           rippleEffect: {
             scale: 3,
             brushType: "stroke",
           },
           itemStyle: {
-            color: "#F6F600",
+            color: "#aaF600",
           },
           zlevel: 2,
         },
@@ -174,7 +174,7 @@ const MapChart = (props: MapChartProps) => {
             position: "right",
             show: true,
             fontSize: 12,
-            color: "#F6F600",
+            color: "#aaF600",
           },
           rippleEffect: {
             number: 2,
@@ -182,7 +182,7 @@ const MapChart = (props: MapChartProps) => {
             brushType: "stroke",
           },
           itemStyle: {
-            color: "#F6F600",
+            color: "#aaF600",
           },
           zlevel: 1,
         },

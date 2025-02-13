@@ -146,7 +146,7 @@ const Top10BarChart = (props: { data: Question[] }) => {
                 },
                 {
                   offset: 1,
-                  color: "#00E0FF", // 100% 处的颜色
+                  color: "#aaE0FF", // 100% 处的颜色
                 },
               ],
             },
@@ -163,7 +163,7 @@ const Top10BarChart = (props: { data: Question[] }) => {
   };
 
   return (
-    <ClipBox direction="right" title="机器人TOP10问题排名">
+    <ClipBox direction="right" title="热点问题">
       <div ref={barChartRef} className={styles.chartWrap}></div>
     </ClipBox>
   );

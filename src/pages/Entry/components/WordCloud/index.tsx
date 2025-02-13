@@ -10,7 +10,7 @@ const WordCloud = (props: { data: Word[] }) => {
     <ClipBox
       customClass={styles.wrap}
       direction="right"
-      title="机器人TOP50词云"
+      title="词云"
     >
       <Cloud data={props.data} />
     </ClipBox>
